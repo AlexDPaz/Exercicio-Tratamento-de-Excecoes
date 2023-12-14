@@ -65,7 +65,7 @@ public class Account {
 			throw new DomainException("Withdraw error: The amount exceeds withdraw limit");
 		}
 		if (amount > getBalance()) {
-			System.out.println("Withdraw error: Not enough balance");
+			throw new DomainException("Withdraw error: Not enough balance");
 		}		
 	}
 
